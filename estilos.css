@@ -1,0 +1,233 @@
+
+/* nav selecciona la barra de navegacion del HTML. */
+nav {
+    display: flex; /* Organiza sus elementos hijos en una fila. */
+    align-items: center; /* Alinea esos elementos por el centro vertical. */
+    justify-content: space-between; /* Reparte el espacio entre los elementos. */
+    gap: 20px; /* Deja 20 px de separacion entre los elementos hijos. */
+    padding: 10px 20px; /* Agrega espacio interior: 10 px arriba/abajo y 20 px a los lados. */
+    background-color: #fafafa; /* Pinta el fondo de un tono casi blanco. */
+}
+
+/* nav h1 selecciona solo el titulo h1 que esta dentro de nav. */
+nav h1 {
+    color: #1d573a; /* Cambia el color de las letras a verde. */
+    font-size: clamp(1.8rem, 2.6vw, 2.5rem); /* Ajusta el tamanio para que se vea limpio en cualquier pantalla. */
+    font-family: "segoe script", "brush script MT"; /* titulo en curva . */
+    margin: 0; /* Elimina margen extra para alinear mejor el logo y el texto. */
+}
+
+/* #logo selecciona el elemento HTML que tiene id="logo". El # indica un id. */
+#logo {
+    width: 90px; /* Ajusta el ancho para que se vea mas limpio y proporcional. */
+    height: 60px; /* Define una altura fija para mantener una forma uniforme. */
+    object-fit: contain; /* Mantiene la imagen sin deformarse. */
+    display: block; /* Quita espacios extra alrededor de la imagen. */
+    background: transparent; /* Asegura que no tenga fondo visible. */
+    padding: 0; /* Elimina espacios internos que lo hagan verse pesado. */
+    filter: contrast(1.08) saturate(1.05); /* Mejora la nitidez visual sin cambiar el color original. */
+}
+
+/* .nav-links ul selecciona la lista ul que esta dentro del elemento class="nav-links".
+   El punto indica una clase. */
+.nav-links ul {
+    display: flex; /* Coloca los enlaces de la lista uno al lado del otro. */
+    gap: 1.5rem; /* Deja separacion entre cada enlace. */
+    list-style: none; /* Quita los puntos que normalmente aparecen en una lista. */
+}
+
+/* .nav-links a selecciona los enlaces a que estan dentro de class="nav-links". */
+.nav-links a {
+    text-decoration: none; /* Quita la linea que suele aparecer debajo de un enlace. */
+    color: #1d573a; /* Pinta el texto de los enlaces de verde. */
+    font-weight: bold; /* Muestra el texto en negrita. */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Usa una fuente sencilla; si falta una, prueba la siguiente. */
+}
+
+/* Esta segunda regla nav vuelve a dar estilos a la misma barra de navegacion.
+   Cuando una propiedad se repite, normalmente gana el valor de la regla que aparece despues:
+   por eso este padding y este fondo reemplazan los valores de la primera regla nav. */
+nav {
+    border: 2px solid #1d573a; /* Dibuja un borde verde de 2 px alrededor de la barra. */
+    border-radius: 10px; /* Redondea las esquinas del borde. */
+    background-color: #e0e7e3f6; /* Reemplaza el fondo anterior por un gris muy claro. */
+    padding-block: 1rem; /* Reduce el alto para que la cabecera se vea mas limpia. */
+}
+
+/* .bienvenida selecciona el parrafo que tiene class="bienvenida". */
+.bienvenida {
+    box-sizing: border-box; /* Incluye el espacio interior y el borde dentro del ancho indicado. */
+    width: calc(100% - 32px); /* Ocupa el ancho disponible menos 32 px para dejar margen a los lados. */
+    max-width: 900px; /* Limita el ancho para que no crezca mas de 900 px. */
+    margin: 48px auto; /* Deja 48 px arriba/abajo; auto centra la caja horizontalmente. */
+    border-radius: 16px; /* Redondea las esquinas de la caja. */
+    color: #ffffff; /* Pinta las letras de blanco. */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Usa una fuente facil de leer. */
+    font-size: 1.25rem; /* Hace el texto un poco mas grande que el tamano base. */
+    text-align: center; /* Centra el texto dentro de la caja. */
+    background-color: #16452e; /* Pinta el fondo de verde oscuro. */
+    padding: 28px 32px; /* Deja espacio entre el texto y los bordes: vertical y horizontal. */
+}
+
+/* #propiedades selecciona la seccion que tiene id="propiedades". */
+#propiedades {
+    display: grid; /* Distribuye las tarjetas usando una cuadricula. */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Reparte todo el ancho disponible entre las tres propiedades. */
+    gap: 24px; /* Separa las tarjetas para que cada una se vea como una caja independiente. */
+    padding: 0 24px 24px; /* Deja espacio entre las tarjetas y los bordes de la pagina. */
+}
+
+/* #propiedades h2 selecciona el titulo h2 dentro de esa seccion. */
+#propiedades h2 {
+    grid-column: 1 / -1; /* Hace que el titulo ocupe toda la fila de la cuadricula. */
+    text-align: center; /* Centra el titulo. */
+    font-family: Arial, Helvetica, sans-serif; /* Usa una fuente sencilla. */
+    padding: 24px; /* Mantiene espacio alrededor del titulo aunque la cuadricula no tenga relleno. */
+}
+
+/* .propiedad selecciona cada tarjeta que tiene class="propiedad". */
+.propiedad {
+    display: flex; /* Organiza el contenido de la tarjeta con Flexbox. */
+    flex-direction: column; /* Apila la foto, los textos y el boton en una columna. */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga de la tarjeta. */
+    padding: 12px 0 16px; /* Deja espacio interior alrededor de la imagen y el contenido. */
+    border: 1px solid #d6e1da; /* Delimita cada propiedad con un borde suave. */
+    border-radius: 14px; /* Redondea las esquinas de la tarjeta. */
+    background-color: #ffffff; /* Pinta el fondo de blanco. */
+    box-shadow: 0 4px 14px rgba(29, 87, 58, 0.12); /* Agrega una sombra suave a la tarjeta. */
+    font-family: Arial, Helvetica, sans-serif; /* Usa una fuente facil de leer en la tarjeta. */
+}
+
+/* .propiedad img selecciona las imagenes que estan dentro de cada tarjeta. */
+.propiedad img {
+    display: block; /* Evita el pequeno espacio que puede quedar debajo de una imagen. */
+    box-sizing: border-box; /* Incluye el borde en el ancho de la imagen. */
+    width: calc(100% - 24px); /* Deja un margen para que la foto quede dentro de su propia caja. */
+    height: 240px; /* Mantiene un tamano uniforme para las fotos. */
+    margin: 0 auto; /* Centra la caja de la imagen en la tarjeta. */
+    border: 1px solid #d6e1da; /* Enmarca la imagen con un borde suave. */
+    border-radius: 10px; /* Redondea las esquinas de la caja de la imagen. */
+    box-shadow: 0 2px 8px rgba(29, 87, 58, 0.14); /* Resalta la imagen dentro de la tarjeta. */
+    object-fit: cover; /* Llena el espacio recortando un poco la foto, sin estirarla. */
+}
+
+/* Deja margen al texto de las tarjetas sin reducir el ancho de las imagenes. */
+.propiedad h3,
+.propiedad p {
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+/* .boton selecciona los botones con class="boton". */
+.boton {
+    margin: auto 16px 16px; /* Empuja el boton hacia abajo y deja espacio a sus lados y debajo. */
+    padding: 10px 16px; /* Agrega espacio interior alrededor del texto del boton. */
+    border: none; /* Quita el borde predeterminado del navegador. */
+    border-radius: 8px; /* Redondea las esquinas del boton. */
+    background-color: #1d573a; /* Pinta el fondo del boton de verde. */
+    color: #ffffff; /* Pinta el texto del boton de blanco. */
+    font-weight: bold; /* Muestra el texto en negrita. */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que se puede pulsar. */
+}
+
+#servicios,
+#nosotros,
+#contacto {
+    max-width: 1000px; /* Evita que estas secciones se hagan demasiado anchas. */
+    margin: 24px auto; /* Deja espacio arriba/abajo y centra cada seccion horizontalmente. */
+    padding: 24px; /* Deja espacio entre el texto y los bordes. */
+    border: 1px solid #d6e1da; /* Dibuja un borde verde claro y fino. */
+    border-radius: 14px; /* Redondea las esquinas. */
+    background-color: #ffffff; /* Pinta el fondo de blanco. */
+    box-shadow: 0 4px 14px rgba(29, 87, 58, 0.12); /* Agrega una sombra suave y semitransparente. */
+    font-family: Arial, Helvetica, sans-serif; /* Usa una fuente sencilla para el texto. */
+    line-height: 1.6; /* Aumenta el espacio entre lineas para facilitar la lectura. */
+    text-align: center; /* Centra los titulos y los parrafos de estas secciones. */
+}
+
+/* Selecciona los titulos h2 que estan dentro de esas tres secciones. */
+#servicios h2,
+#nosotros h2,
+#contacto h2 {
+    color: #1d573a; /* Pinta los titulos de verde. */
+    text-align: center; /* Centra los titulos. */
+}
+
+/* Da formato al contenido principal de la pagina "Sobre nosotros". */
+.sobre-nosotros {
+    box-sizing: border-box; /* Incluye el relleno y el borde dentro del ancho total. */
+    width: calc(100% - 32px); /* Deja un margen de 16 px a cada lado en pantallas pequenas. */
+    max-width: 900px; /* Evita que el texto se extienda demasiado en pantallas grandes. */
+    margin: 48px auto; /* Separa el contenido de los bordes verticalmente y lo centra. */
+    padding: 40px clamp(24px, 6vw, 64px); /* Ajusta el espacio interior segun el ancho de pantalla. */
+    border: 1px solid #d6e1da; /* Dibuja un borde fino de color verde claro. */
+    border-top: 6px solid #1d573a; /* Destaca el borde superior con el verde principal. */
+    border-radius: 16px; /* Redondea las esquinas del panel. */
+    background-color: #ffffff; /* Mantiene el fondo del panel blanco. */
+    box-shadow: 0 8px 24px rgba(29, 87, 58, 0.12); /* Agrega una sombra discreta. */
+    color: #34443a; /* Define el color del texto principal. */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Usa fuentes de facil lectura. */
+    line-height: 1.8; /* Aumenta la separacion entre lineas de texto. */
+}
+
+/* Estilo del titulo principal de "Sobre nosotros". */
+.sobre-nosotros h1 {
+    margin: 0 0 28px; /* Quita el margen superior y separa el titulo del primer parrafo. */
+    color: #1d573a; /* Usa el verde principal de la pagina. */
+    font-size: clamp(2rem, 5vw, 2.8rem); /* Ajusta el tamano del titulo al ancho de pantalla. */
+    text-align: center; /* Centra el titulo dentro del panel. */
+}
+
+/* Estilo de cada parrafo de la pagina "Sobre nosotros". */
+.sobre-nosotros p {
+    margin: 0 0 20px; /* Separa los parrafos y elimina su margen superior. */
+    font-size: 1.05rem; /* Hace el texto ligeramente mayor que el tamano base. */
+    text-align: left; /* Alinea el texto a la izquierda para facilitar su lectura. */
+}
+
+/* Quita el espacio inferior extra del ultimo parrafo del panel. */
+.sobre-nosotros p:last-child {
+    margin-bottom: 0; /*quita el margen inferior del elemento*/
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding-inline: 12px;
+    }
+
+    nav h1 {
+        font-size: clamp(1.4rem, 7vw, 1.8rem);
+    }
+
+    #logo {
+        width: 70px;
+        height: 50px;
+    }
+
+    .nav-links {
+        flex: 1 0 100%;
+    }
+
+    .nav-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #propiedades {
+        grid-template-columns: minmax(0, 1fr);
+        padding-inline: 16px;
+    }
+
+    #servicios,
+    #nosotros,
+    #contacto {
+        margin-inline: 16px;
+        padding: 20px 16px;
+    }
+}
